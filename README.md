@@ -11,6 +11,19 @@ Then, when you instantiate the Detector class, you have to specify the pathname 
 
 See, as an example, this [NB](https://github.com/luigisaetta/1d2d-code-detector/blob/main/test_qrcode_detector.ipynb).
 
+## Usage
+```
+# istantiate
+detector = BarcodeQrcodeDetector(MODEL_BARCODE_PATH, CONFIDENCE)
+
+# read the image
+img1 = read_image("./img1.jpg")
+
+# get a vector with all BB, confidence and classes
+boxes = detector.detect_1d2d_codes(img1)
+
+```
+
 ## The model.
 The model to detect Bounding Box Rectangles for barcode/qrcode has been developed using [Ultralytics](https://github.com/ultralytics/yolov5) implementation of YOLO V5.
 

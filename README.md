@@ -2,6 +2,8 @@
 # Barcode and QRcode Detector
 This repository contains all the work I have done to develop a **barcode/qrcode** detector using **YOLOv5**
 
+The **model** detect Bounding Box Rectangles for barcode/qrcode. It has been developed using [Ultralytics](https://github.com/ultralytics/yolov5) implementation of **YOLO V5**.
+
 ## Setup
 To use the code for the barcode/qrcode detector you need to download the file with the trained model, in a local directory.
 
@@ -13,7 +15,7 @@ See, as an example, this [NB](https://github.com/luigisaetta/1d2d-code-detector/
 
 ## Usage
 ```
-# istantiate
+# instantiate
 detector = BarcodeQrcodeDetector(MODEL_BARCODE_PATH, CONFIDENCE)
 
 # read the image
@@ -25,13 +27,11 @@ boxes = detector.detect_1d2d_codes(img1)
 ```
 
 ## The model.
-The model to detect Bounding Box Rectangles for barcode/qrcode has been developed using [Ultralytics](https://github.com/ultralytics/yolov5) implementation of YOLO V5.
-
 The model has been trained using a 1GPU **V100**, in Oracle Data Science.
 
-The model has been trained over around 110 jpg images, for 100 epochs.
+The model has been trained over around **110 jpg** images, for 100 epochs.
 
-These are the **performance metrics** measured on the validation set:
+These are the **performance metrics**, measured on the validation set:
     
 |Class     |Images  |Instances      |P          |R       |mAP50   |mAP50-95 |
 |----------|--------|---------------|-----------|--------|--------|---------|

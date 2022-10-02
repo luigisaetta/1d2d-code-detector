@@ -39,4 +39,12 @@ These are the **performance metrics**, measured on the validation set:
 | barcode  |   21   |      143      |   0.945   |  0.923 |  0.963 |   0.712 |
 | qrcode   |   21   |      20       |   0.987   |  1     |  0.995 |   0.849 |
 
+## Dependencies
+Obviously, you don't need to download the code for YOLO V5 to use the Detector.
+
+The only dependencies are:
+* **Torch**, version 1.10.0 or above
+* **CV2**, version 4.6.0 or above
+
+The version listed here are the version I have used for dev/test.
 

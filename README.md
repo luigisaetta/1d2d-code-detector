@@ -4,6 +4,8 @@ This repository contains all the work I have done to develop a **barcode/qrcode*
 
 The **model** detects Bounding Box Rectangles for barcode/qrcode. It has been developed using [Ultralytics](https://github.com/ultralytics/yolov5) implementation of **YOLO V5**.
 
+![barcodes detected](https://github.com/luigisaetta/1d2d-code-detector/blob/main/screenshot.jpg "barcodes")
+
 ## Setup
 To use the code for the barcode/qrcode detector you need to download the file with the trained PyTorch model, in a local directory.
 

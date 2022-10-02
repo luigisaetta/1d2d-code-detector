@@ -46,5 +46,5 @@ The only dependencies are:
 * **Torch**, version 1.10.0 or above
 * **CV2**, version 4.6.0 or above
 
-The version listed here are the version I have used for dev/test.
+The versions listed here are the versions I have used for dev/test.
 

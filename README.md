@@ -1,3 +1,4 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # Barcode and QRcode Detector
 This repository contains all the work I have done to develop a **barcode/qrcode** detector using **YOLOv5**
 
@@ -12,6 +13,8 @@ See, as an example, this [NB](https://github.com/luigisaetta/1d2d-code-detector/
 
 ## The model.
 The model to detect Bounding Box Rectangles for barcode/qrcode has been developed using [Ultralytics](https://github.com/ultralytics/yolov5) implementation of YOLO V5.
+
+The model has been trained using a 1GPU **V100**, in Oracle Data Science.
 
 The model has been trained over around 110 jpg images, for 100 epochs.
 

@@ -8,6 +8,8 @@ You can get the file from [here](https://objectstorage.eu-frankfurt-1.oracleclou
 
 Then, when you instantiate the Detector class, you have to specify the pathname for the pt file.
 
+See, as an example, this [NB](https://github.com/luigisaetta/1d2d-code-detector/blob/main/test_qrcode_detector.ipynb).
+
 ## The model.
 The model to detect Bounding Box Rectangles for barcode/qrcode has been developed using [Ultralytics](https://github.com/ultralytics/yolov5) implementation of YOLO V5.
 

@@ -1,6 +1,6 @@
 #
 # author:      L. Saetta
-# last update: 03/10/2022
+# last update: 06/10/2022
 #
 import torch
 import cv2
@@ -13,6 +13,9 @@ class BarcodeQrcodeDetector:
     PARENT_MODEL = "ultralytics/yolov5"
     # if you want to show the images with barcodes detectd (for example, in a NB)
     SHOW = False
+    # if we want to apply yolov5 TTA in inference (default = True), can be changed
+    # without TTA is a little bit faster
+    AUGMENT = True
 
     def _load_model(self):
         self.model = torch.hub.load(self.PARENT_MODEL, "custom", path=self.model_path)
@@ -65,7 +68,7 @@ class BarcodeQrcodeDetector:
     # This one return BB rectangles
     def detect_1d2d_codes(self, img: np.ndarray):
         # using TTA
-        results = self.model(img, augment=True)
+        results = self.model(img, augment=self.AUGMENT)
 
         if self.SHOW:
             results.print()
@@ -90,7 +93,7 @@ class BarcodeQrcodeDetector:
     # This one return images + class_name
     def detect_and_crop_1d2d_codes(self, img: np.ndarray):
         # using TTA
-        results = self.model(img, augment=True)
+        results = self.model(img, augment=self.AUGMENT)
 
         # first the barcodes and then qrcodes
         list_barcodes = self.do_crop_for_class(results, "barcode")

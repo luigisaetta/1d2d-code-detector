@@ -30,6 +30,20 @@ img1 = read_image("./img1.jpg")
 boxes = detector.detect_1d2d_codes(img1)
 
 ```
+If you want to get br/qr cropped:
+``
+from brqr_detector import BarcodeQrcodeDetector
+
+# instantiate
+detector = BarcodeQrcodeDetector(MODEL_BARCODE_PATH, CONFIDENCE)
+
+# read the image
+img1 = read_image("./img1.jpg")
+
+# get a list of pairs (img, class_name)
+imgs_and_classes = detector.detect_and_crop_1d2d_codes(img1)
+
+```
 
 ## The model.
 The model has been trained using a 1GPU **V100**, in Oracle Data Science.

@@ -16,7 +16,10 @@ Then, when you instantiate the Detector class, you have to specify the pathname 
 See, as an example, this [NB](https://github.com/luigisaetta/1d2d-code-detector/blob/main/test_qrcode_detector.ipynb).
 
 ## Usage
+If you want to get the BB rectangles:
 ```
+from brqr_detector import BarcodeQrcodeDetector
+
 # instantiate
 detector = BarcodeQrcodeDetector(MODEL_BARCODE_PATH, CONFIDENCE)
 

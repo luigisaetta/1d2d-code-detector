@@ -31,7 +31,7 @@ boxes = detector.detect_1d2d_codes(img1)
 
 ```
 If you want to get br/qr cropped:
-``
+```
 from brqr_detector import BarcodeQrcodeDetector
 
 # instantiate
